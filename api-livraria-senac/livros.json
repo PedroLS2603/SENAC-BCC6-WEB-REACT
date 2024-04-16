@@ -1,37 +1,44 @@
 [
         {
-            "title": "Minha Vida Fora de Série 1",
+            "title": "A queda dos reinos",
+            "year": 2012,
+            "genre": "Young Adult Fiction",
+            "Author": "Morgan Rhodes",
+            "imagem": "https://m.media-amazon.com/images/I/81NeJPO9QEL._AC_UF1000,1000_QL80_.jpg"
+        },
+        {
+            "title": "Primavera rebelde",
             "year": 2013,
             "genre": "Young Adult Fiction",
-            "Author": "Paula Pimenta",
-            "imagem": "https://m.media-amazon.com/images/I/81LY6nLXdmL._AC_UF1000,1000_QL80_.jpg"
+            "Author": "Morgan Rhodes",
+            "imagem": "https://m.media-amazon.com/images/I/51Pk7NW+KdL.jpg"
         },
         {
-            "title": "Minha Vida Fora de Série 2",
+            "title": "A ascenção das trevas",
             "year": 2014,
             "genre": "Young Adult Fiction",
-            "Author": "Paula Pimenta",
-            "imagem": "https://m.media-amazon.com/images/I/91b6DCsy4sL._AC_UF1000,1000_QL80_.jpg"
+            "Author": "Morgan Rhodes",
+            "imagem": "https://m.media-amazon.com/images/I/51+OtFMvCAL.jpg"
         },
         {
-            "title": "Minha Vida Fora de Série 3",
+            "title": "Maré congelada",
             "year": 2015,
             "genre": "Young Adult Fiction",
-            "Author": "Paula Pimenta",
-            "imagem": "https://m.media-amazon.com/images/I/91rKxE97TdL._AC_UF1000,1000_QL80_.jpg"
+            "Author": "Morgan Rhodes",
+            "imagem": "https://osmelhoreslivros.com.br/wp-content/uploads/2021/12/mare-congelada.jpg"
         },
         {
-            "title": "Minha Vida Fora de Série 4",
-            "year": 2016,
-            "genre": "Young Adult Fiction",
-            "Author": "Paula Pimenta",
-            "imagem": "https://img.wook.pt/images/minha-vida-fora-de-serie-4-temporada-paula-pimenta/MXwyNDU2OTkxOHwyMDY3NjEwOHwxNjEwMDM5NTM2MDAwfHdlYnA=/250x"
-        },
-        {
-            "title": "Minha Vida Fora de Série 5",
+            "title": "Tempestade de cristal",
             "year": 2017,
             "genre": "Young Adult Fiction",
-            "Author": "Paula Pimenta",
-            "imagem": "https://grupoautentica.com.br/img/capas/x/minha-vida-fora-de-serie-5-temporada-2291-20231010105005.jpg"
+            "Author": "Morgan Rhodes",
+            "imagem": "https://cdl-static.s3-sa-east-1.amazonaws.com/covers/200/9788555340345/tempestade-de-cristal.jpg"
+        },
+        {
+            "title": "Reinado imortal",
+            "year": 2018,
+            "genre": "Young Adult Fiction",
+            "Author": "Morgan Rhodes",
+            "imagem": "https://http2.mlstatic.com/D_NQ_NP_741421-MLB29446449559_022019-O.webp"
         }
 ]
