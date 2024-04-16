@@ -1,0 +1,8 @@
+POST http://localhost:8080/addUser
+Content-Type: application/json
+
+{
+    "name": "Vini Petratti",
+    "email": "vinipetra@gmail.com",
+    "password": "vinizinhopetrattinho"
+}
