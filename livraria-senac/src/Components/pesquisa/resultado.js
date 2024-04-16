@@ -10,9 +10,9 @@ const Resultado = ({livros}) => {
     return(
         <Container>
             {
-                livros.map((livro) => {
+                livros.map((livro, index) => {
                     return (
-                        <Card>
+                        <Card key={index}>
                             <Titulo> {livro.title} </Titulo>
                             <ImagemLivro src={livro.imagem} alt={livro.title}/>
                             <Subtitulo> {livro.year} </Subtitulo>

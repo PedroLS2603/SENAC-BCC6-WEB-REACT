@@ -12,10 +12,16 @@ const Pesquisa = () => {
         // Evita que a página recarregue
         e.preventDefault();
         try{
-            const resposta = await fetch(`http://localhost:8000/buscarLivrosPorTitulos/${termoBusca}`);
-            const dados = await resposta.json();
+            let dados;
+            if(termoBusca.length > 0) {
+                const resposta = await fetch(`http://localhost:8000/buscarLivrosPorTitulos/${termoBusca}`);
+                dados = await resposta.json();
+            } else {
+                const resposta = await fetch(`http://localhost:8000/livros`);
+                dados = await resposta.json();
+            }
+            
             setLivros(dados);
-            console.log(dados)
         }
         catch (error) {
             console.log(error);
@@ -26,11 +32,11 @@ const Pesquisa = () => {
             <Titulo>Encontre seu próximo livro</Titulo>
             <Texto color='white'>Explore por titulo, o livro desejado</Texto>
             <Input
-                placeholder="  Digite o titulo do livro"
+                placeholder="Digite o titulo do livro"
                 value={termoBusca}
-                onChange={(e) => setTermoBusca(e.target.value)}
+                onChange={(e) => {setTermoBusca(e.target.value); handleSubmit(e)}}
             />
-            <Button onClick={handleSubmit}>Pesquisar</Button>
+            <Button onClick={handleSubmit} >Pesquisar</Button>
 
             <Resultado livros={livros}/>
                 

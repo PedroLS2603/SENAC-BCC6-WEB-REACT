@@ -13,9 +13,10 @@ function App() {
         <Route path='/' element={
           <>
             <header className='App-header'>
+              <MaisBuscados />
               <Pesquisa />
+
             </header>
-            <MaisBuscados />
           </>
         } />
 

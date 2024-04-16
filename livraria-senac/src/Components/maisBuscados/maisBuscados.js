@@ -10,8 +10,7 @@ const MaisBuscados = () => {
             try{
                 const response =  await fetch('http://localhost:8000/livros');
                 const data = await response.json();
-                console.log(data);
-                setLivros(data);
+                setLivros(data.slice(0,3));
 
             } catch(error){
                 console.log(error)
@@ -25,19 +24,22 @@ const MaisBuscados = () => {
 
 
     return (
-        <Container>
-            {
-                livros.map((livro) => {
-                    return (
-                        <Card>
-                            <Titulo> {livro.title} </Titulo>
-                            <ImagemLivro src={livro.imagem} alt={livro.title}/>
-                            <Subtitulo color = "dark-gray"> {livro.year} </Subtitulo>
-                        </Card>
-                    )
-                })
-            }
-        </Container>
+        <>
+            <h1>Mais procurados</h1>
+            <Container>
+                {
+                    livros.map((livro, index) => {
+                        return (
+                            <Card key={index}>
+                                <Titulo> {livro.title} </Titulo>
+                                <ImagemLivro src={livro.imagem} alt={livro.title}/>
+                                <Subtitulo color = "dark-gray"> {livro.year} </Subtitulo>
+                            </Card>
+                        )
+                    })
+                }
+            </Container>
+        </>
     );
 
 
