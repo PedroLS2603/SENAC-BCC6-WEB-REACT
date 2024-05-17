@@ -1,1 +1,14 @@
-[{"user":"pedrols","senha":"123"},{"user":"pedrols2","password":"1234"}]
+[
+  {
+    "user": "pedrols",
+    "senha": "123"
+  },
+  {
+    "user": "pedrols2",
+    "senha": "1234"
+  },
+  {
+    "user": "pedrols3",
+    "senha": "123"
+  }
+]

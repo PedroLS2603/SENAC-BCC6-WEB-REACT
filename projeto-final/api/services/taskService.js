@@ -34,3 +34,29 @@ exports.getTaskById = (id) => {
     
     return task_procurada
 }
+
+exports.updateById = (task_enviada) => {
+    const jsonData = fs.readFileSync('tarefas.json', 'utf-8');
+    const tasks = JSON.parse(jsonData);
+    const idx_elemento = tasks.findIndex(task => task.id == task_enviada.id)
+
+    if(idx_elemento >= 0) {
+        tasks[idx_elemento] = task_enviada
+        fs.writeFileSync('tarefas.json', JSON.stringify(tasks), 'utf-8');
+
+        return task_enviada
+    }
+
+    return null
+}
+
+exports.deleteById = (id) => {
+    const jsonData = fs.readFileSync('tarefas.json', 'utf-8');
+    const tasks = JSON.parse(jsonData);
+    const idx_elemento = tasks.findIndex(task => task.id == id)
+
+    if(idx_elemento >= 0) {
+        tasks.splice(idx_elemento, 1)
+        fs.writeFileSync('tarefas.json', JSON.stringify(tasks), 'utf-8');
+    }
+}
