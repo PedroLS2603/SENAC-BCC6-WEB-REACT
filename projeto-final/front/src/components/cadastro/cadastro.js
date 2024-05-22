@@ -1,10 +1,25 @@
 import React from "react";
 import "./cadastro.css";
+import {InputUsuario, Label} from '../styles/inputs'
+import {CadastroContainer, FormRow} from '../styles/containers'
+import { ButtonCadastro } from "../styles/button";
 
 const Cadastro = () => {
   return (
     <>
-        <h1>CADASTRO - WIP</h1>
+        <CadastroContainer>
+          <FormRow>
+            <Label>Usuário</Label>
+            <InputUsuario/>
+          </FormRow>
+          <FormRow>
+            <Label>Senha</Label>
+            <InputUsuario/>
+          </FormRow>
+          <FormRow>
+            <ButtonCadastro>Cadastrar</ButtonCadastro>
+          </FormRow>
+        </CadastroContainer>
     </>
   );
 };
