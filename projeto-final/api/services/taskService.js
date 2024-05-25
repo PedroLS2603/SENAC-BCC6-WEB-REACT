@@ -1,5 +1,4 @@
 const fs = require('fs');
-
 exports.addTask = (tipo, titulo, descricao, entrega_estimada) => {
     const jsonData = fs.readFileSync('tarefas.json', 'utf-8');
     const tasks = JSON.parse(jsonData);
@@ -22,7 +21,10 @@ exports.addTask = (tipo, titulo, descricao, entrega_estimada) => {
 
 exports.getAllTasks = () => {
     const jsonData = fs.readFileSync('tarefas.json', 'utf-8');
-    const tasks = JSON.parse(jsonData);
+    let tasks = JSON.parse(jsonData);
+    tasks.forEach(task => {
+        task.entrega_estimada = new Date(parseInt(task.entrega_estimada) * 1000).toLocaleDateString()})
+    console.log(tasks)
     
     return tasks
 }

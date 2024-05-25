@@ -28,7 +28,6 @@ app.post('/usuario/cadastro', (req, res) => {
     const {user, senha} = req.body;
 
     const user_autenticado = userService.addUser(user,senha)
-
     if(user_autenticado) {
         res.status(200).send({message: 'Usuário cadastrado com sucesso'})
     } else {

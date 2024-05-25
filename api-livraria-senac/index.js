@@ -3,6 +3,7 @@
 const express = require('express');
 const livrosImportados = require('./services/livroServices');
 const usersServices = require('./services/usersServices');
+const taskServices = require('./services/taskService')
 const body = require('body-parser');
 const cors = require('cors');
 const e = require('express');
@@ -40,6 +41,14 @@ app.post('/addUser', (req, res)=>{
     else {
         res.status(400).send('Erro ao cadastrar usuário');
     }
+})
+
+app.post('/addTask', (req, res) => {
+    const {tipo, titulo, descricao, entrega_estimada} = req.body;
+    
+    taskServices.addTask(tipo,titulo,descricao,entrega_estimada)
+
+    res.status(200).send({message:'Tarefa cadastrada com sucesso.'})
 })
 
 app.listen(8000)

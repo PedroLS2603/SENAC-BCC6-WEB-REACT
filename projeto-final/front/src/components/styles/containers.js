@@ -44,7 +44,9 @@ export const Card = styled.div`
 export const FormRow = styled.div`
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
+    width: 80%;
+    align-items: center
     margin-bottom: 15px;
     `;
 

@@ -4,7 +4,7 @@ exports.addUser = (user, password) => {
     const jsonData = fs.readFileSync('users.json', 'utf-8');
     const users = JSON.parse(jsonData);
 
-    const user_cadastrado = users.find(user_db => {user_db.user == user && user_db.senha == password})
+    const user_cadastrado = users.find(user_db => user_db.user == user)
 
     if(user_cadastrado) {
         return null
