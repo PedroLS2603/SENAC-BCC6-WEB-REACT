@@ -10,4 +10,12 @@
     display: grid;
     grid-template-columns: auto auto auto;
     grid-gap: 25px;
+    overflow-y: scroll;
+    max-height: 60vh;
+}
+
+.options-container {
+    display: flex;
+    width: 70vw;
+    justify-content: space-between;
 }

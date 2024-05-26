@@ -24,8 +24,11 @@ const Home = () => {
 
   return (
     <>  
+    <div className="options-container">
+            <a href="/"><h1>Sair</h1></a>
+            <a href="/cadastro"><h1>Cadastrar</h1></a>
+        </div>
     <div className="home-container">
-        <a href="/"><h1>Sair</h1></a>
         <div className="home-grid-cards">
         { 
                     tarefas.map((tarefa, index) => {
