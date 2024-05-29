@@ -4,7 +4,6 @@ exports.addTask = (tipo, titulo, descricao, entrega_estimada) => {
     const tasks = JSON.parse(jsonData);
     const ultimo_id = tasks[tasks.length - 1].id
 
-
     const newTask = {
         id: ultimo_id + 1,
         tipo: tipo,
@@ -23,9 +22,7 @@ exports.getAllTasks = () => {
     const jsonData = fs.readFileSync('tarefas.json', 'utf-8');
     let tasks = JSON.parse(jsonData);
     tasks.forEach(task => {
-        task.entrega_estimada = new Date(parseInt(task.entrega_estimada) * 1000).toLocaleDateString()})
-    console.log(tasks)
-    
+        task.entrega_estimada = new Date(parseInt(task.entrega_estimada)).toLocaleDateString()})
     return tasks
 }
 
