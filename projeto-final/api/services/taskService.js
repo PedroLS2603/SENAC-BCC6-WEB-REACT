@@ -22,7 +22,7 @@ exports.getAllTasks = () => {
     const jsonData = fs.readFileSync('tarefas.json', 'utf-8');
     let tasks = JSON.parse(jsonData);
     tasks.forEach(task => {
-        task.entrega_estimada = new Date(parseInt(task.entrega_estimada)).toLocaleDateString()})
+        task.entrega_estimada = new Date(parseInt(task.entrega_estimada) * 1000).toLocaleDateString()})
     return tasks
 }
 
